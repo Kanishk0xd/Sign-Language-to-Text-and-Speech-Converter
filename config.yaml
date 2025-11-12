@@ -24,8 +24,8 @@ vocabulary:
   # Map detected signs to phrases
   hello: "Hello"
   thanks: "Thank you"
-  yes: "Yes"
-  no: "No"
+  "yes": "Yes"
+  "no": "No"
   please: "Please"
   help: "Help me"
   goodbye: "Goodbye"

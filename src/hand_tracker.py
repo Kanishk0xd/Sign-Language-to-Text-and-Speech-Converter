@@ -20,6 +20,7 @@ class HandTracker:
         """
         self.mp_hands = mp.solutions.hands
         self.mp_drawing = mp.solutions.drawing_utils
+        self.max_num_hands = max_num_hands
         self.hands = self.mp_hands.Hands(
             static_image_mode=False,
             max_num_hands=max_num_hands,
@@ -54,10 +55,10 @@ class HandTracker:
         # If no hands detected, return zeros
         if not landmarks:
             # 21 landmarks per hand * 3 coordinates * max_num_hands
-            landmarks = [0.0] * (21 * 3 * self.hands.max_num_hands)
+            landmarks = [0.0] * (21 * 3 * self.max_num_hands)
         
         # Pad if fewer hands than max
-        expected_length = 21 * 3 * self.hands.max_num_hands
+        expected_length = 21 * 3 * self.max_num_hands
         while len(landmarks) < expected_length:
             landmarks.extend([0.0] * (21 * 3))
         

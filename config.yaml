@@ -1,0 +1,47 @@
+# Sign Language Recognition Configuration
+
+# Video Input Settings
+video:
+  source: 0  # 0 for webcam, or path to video file
+  width: 640
+  height: 480
+  fps: 30
+
+# Model Settings
+model:
+  type: "lstm"  # lstm or transformer
+  sequence_length: 30  # Number of frames to collect before prediction
+  threshold: 0.8  # Confidence threshold for predictions
+
+# Hand Tracking Settings
+hands:
+  max_num_hands: 2
+  min_detection_confidence: 0.7
+  min_tracking_confidence: 0.5
+
+# Vocabulary and Phrase Mapping
+vocabulary:
+  # Map detected signs to phrases
+  hello: "Hello"
+  thanks: "Thank you"
+  yes: "Yes"
+  no: "No"
+  please: "Please"
+  help: "Help me"
+  goodbye: "Goodbye"
+
+# Text-to-Speech Settings
+tts:
+  enabled: true
+  mode: "offline"  # offline (pyttsx3) or online (gTTS)
+  rate: 150  # Speech rate for offline TTS
+  volume: 1.0  # Volume for offline TTS (0.0 to 1.0)
+  language: "en"  # Language code
+
+# Display Settings
+display:
+  show_video: true
+  show_landmarks: true
+  caption_position: "bottom"  # bottom or top
+  font_scale: 1.0
+  font_thickness: 2

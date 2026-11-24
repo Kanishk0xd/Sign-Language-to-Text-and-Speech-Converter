@@ -210,11 +210,6 @@ pytest -q
 
 [MIT](LICENSE) 
 
-## Acknowledgements
-
-- Inspired by community work on sign recognition, including MediaPipe/OpenCV pipelines and sequence models similar to [Devansh-47/Sign-Language-To-Text-and-Speech-Conversion](https://github.com/Devansh-47/Sign-Language-To-Text-and-Speech-Conversion).
-- Thanks to contributors and dataset authors whose work makes this possible.
-
 ## Citation
 
 If you use this project in academic work, please cite it appropriately and include dataset citations as required.
